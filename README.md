@@ -2,7 +2,9 @@
 
 SpendWise is a full-stack personal finance and expense tracking web application engineered with the MERN stack (MongoDB, Express.js, React.js with Vite, Node.js) and styled with Tailwind CSS.
 
-The application features a modern, recruiter-friendly dashboard inspired by Stripe's clean visual design, incorporating a custom **Tan-Hide Warm Ochre** color palette, responsive navigation, real-time MongoDB aggregations, category breakdowns, monthly cash flow charts, and monthly budget limit guardrails.
+---
+
+<img width="1920" height="1200" alt="Screenshot (347)" src="https://github.com/user-attachments/assets/4b7c1c9d-6fca-4822-b5c1-f65a5f599a42" />
 
 ---
 
@@ -23,17 +25,33 @@ The application features a modern, recruiter-friendly dashboard inspired by Stri
 - **Sorting & Pagination**: Sort by Date (Newest/Oldest) or Amount (High to Low / Low to High) with paginated navigation.
 - **Financial Precision**: Numeric amounts rounded to 2 decimal places to avoid floating-point inaccuracies.
 
+---
+  
+  <img width="1920" height="1200" alt="Screenshot (352)" src="https://github.com/user-attachments/assets/ad06e03a-c63e-4fc2-a513-53ca5c8b6e93" />
+
+---
+
 ### 3. Monthly Budgeting
 - Set custom monthly spending limits persisted directly in MongoDB.
 - Live calculation of spent and remaining budget.
 - Automatic visual warning when spending crosses 80% of the set limit.
 - High-priority alert banner when the budget is exceeded.
 
+---
+  <img width="1920" height="1200" alt="Screenshot (350)" src="https://github.com/user-attachments/assets/1437b03b-d12c-44a1-9876-1890a4f12402" />
+
+---
 ### 4. Analytics & Insights
 - Category-wise expense and income breakdown.
 - Monthly expense and income velocity area chart.
 - Granular breakdown table with transaction counts, average order values, and share percentages.
 - Timeline selector for 3, 6, and 12-month views.
+
+ ---
+
+  <img width="1920" height="1200" alt="Screenshot (349)" src="https://github.com/user-attachments/assets/1c5c476e-40b0-4f15-9105-fc8a370a7c9e" />
+
+  ---
 
 ### 5. Polished User Interface & Design
 - **Custom Tan-Hide Color Palette**: Modern warm ochre tones (`#fff7ed` to `#411509`).
@@ -46,12 +64,12 @@ The application features a modern, recruiter-friendly dashboard inspired by Stri
 
 ## Technologies Used
 
-- **Frontend**: React.js 19 with Vite, Tailwind CSS, Framer Motion, Axios
+- **Frontend**: React.js 19 with Vite, Tailwind CSS, Axios
 - **Charts**: Recharts
-- **Icons**: React Icons (`react-icons/hi2`)
+- **Icons**: React Icons
 - **Backend**: Node.js, Express.js, Morgan, CORS, Dotenv
 - **Database**: MongoDB with Mongoose ODM
-- **Development & Process**: Kiro / Antigravity AI assistant
+- **Development & Process**: Kiro 
 
 ---
 
@@ -59,11 +77,11 @@ The application features a modern, recruiter-friendly dashboard inspired by Stri
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (version 20.x or higher)
-- [MongoDB Atlas](https://www.mongodb.com/atlas) connection string (or a local MongoDB instance running on `mongodb://localhost:27017/spendwise`)
+
 
 ### 1. Clone or Open the Workspace
 ```bash
-cd expense-tracker-anjana-task-startupmeu
+git clone https://github.com/Anj-ana-396/startupmeu-spendwise-anjana-task
 ```
 
 ### 2. Install Dependencies
@@ -72,43 +90,17 @@ cd expense-tracker-anjana-task-startupmeu
 ```bash
 cd server
 npm install
-cd ..
+
 ```
 
 #### Install Frontend Dependencies:
 ```bash
 cd client
 npm install
-cd ..
+
 ```
 
-*(Alternatively, install both from the root directory using: `npm run install:all`)*
 
----
-
-## Environment Variable Configuration
-
-### Backend Configuration (`server/.env`)
-Create a `.env` file inside the `server/` directory:
-```env
-PORT=5000
-NODE_ENV=development
-CLIENT_ORIGIN=http://localhost:5173
-MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/spendwise?retryWrites=true&w=majority
-```
-
-### Frontend Configuration (`client/.env`)
-Create a `.env` file inside the `client/` directory (optional, defaults to `http://localhost:5000/api`):
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
-### MongoDB Atlas Setup:
-1. Create a free M0 cluster on [MongoDB Atlas](https://cloud.mongodb.com/).
-2. Create a Database User with read/write access under **Database Access**.
-3. Whitelist your IP or `0.0.0.0/0` under **Network Access**.
-4. Click **Connect** → **Drivers** to copy your connection string.
-5. Paste it into `server/.env` under `MONGODB_URI` with your user password and database name `spendwise`.
 
 ---
 
@@ -121,21 +113,13 @@ The backend and frontend are designed to run **separately** in two distinct term
 cd server
 npm run dev
 ```
-- The backend server will start on: **`http://localhost:5000`**
 
 ### Terminal 2 — Start the Frontend Client:
 ```bash
 cd client
 npm run dev
 ```
-- The Vite React application will start on: **`http://localhost:5173`**
 
-### (Optional) Seed Realistic Demo Data:
-To populate realistic transactions (Salary, Rent, Groceries, Freelance, Subscriptions) and sample monthly budgets:
-```bash
-cd server
-npm run seed
-```
 
 ---
 
