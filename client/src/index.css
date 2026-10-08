@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-tan-hide-50: #fff7ed;
+    --color-tan-hide-100: #feedd6;
+    --color-tan-hide-200: #fcd7ac;
+    --color-tan-hide-300: #f9b978;
+    --color-tan-hide-400: #f79f58;
+    --color-tan-hide-500: #f3731c;
+    --color-tan-hide-600: #e45912;
+    --color-tan-hide-700: #bd4211;
+    --color-tan-hide-800: #963616;
+    --color-tan-hide-900: #792e15;
+    --color-tan-hide-950: #411509;
+  }
+
+  body {
+    background-color: #faf9f7;
+    color: #1e293b;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Stripe-inspired subtle backdrop and glass styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.03), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -4px rgba(243, 115, 28, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+  border-color: rgba(243, 115, 28, 0.25);
+}
+
+/* Glowing dot accent */
+.glow-badge {
+  position: relative;
+}
+
+.glow-badge::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #f3731c, #f79f58);
+  opacity: 0.15;
+  z-index: -1;
+}

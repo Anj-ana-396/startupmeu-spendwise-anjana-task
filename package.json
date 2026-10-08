@@ -1,0 +1,27 @@
+{
+  "name": "spendwise-app",
+  "version": "1.0.0",
+  "description": "SpendWise - Full-Stack Modern MERN Expense Tracker",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "test": "npm run test --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  },
+  "keywords": [
+    "expense-tracker",
+    "mern",
+    "react",
+    "express",
+    "mongodb",
+    "tailwind",
+    "recharts"
+  ],
+  "author": "Anjana Kumari",
+  "license": "MIT"
+}
